@@ -10,5 +10,5 @@ for Rails 4.1.x
 
 ## Usage
 ```
-rails new myapp -T -m https://raw.githubusercontent.com/unosk/rails-application-template/master/template.rb
+rails new myapp -d mysql -T -m https://raw.githubusercontent.com/unosk/rails-application-template/master/template.rb
 ```
