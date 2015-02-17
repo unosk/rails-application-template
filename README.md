@@ -1,14 +1,27 @@
 # Rails Application Template
 
-for Rails 4.1.x
+for Rails 4.2.x
 
-- Replace ERB/CSS/Javascript to Haml/Sass/Coffeescript
-- Setup Rspec/Capybara/Factorygirl/Guard/Spring
-- Set Timezone to Asia/Tokyo
-- Set Locale to ja
-- Disable some generators
+## Keyword
+- Haml/Sass/Coffeescript
+- Rspec/Capybara
+- FactoryGirl
+- Faker
+- Pry
+- Locale
+- Timezone
+- Mailcatcher
+- Rubocop
+- Bullet
+- Yard
+
+### Option
+- Carrierwave
+- Devise
+- Kaminari
 
 ## Usage
 ```
-rails new myapp -d mysql -T -m https://raw.githubusercontent.com/unosk/rails-application-template/master/template.rb
+git clone git://github.com/unosk/rails-application-template
+rails new APP_PATH --template rails-application-template/template.rb --skip-test-unit
 ```

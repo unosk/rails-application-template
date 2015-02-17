@@ -1,4 +1,5 @@
 if ENV['COVERAGE']
+  require 'simplecov'
   require 'simplecov-rcov'
   class SimpleCov::Formatter::CIFriendly
     def format(result)

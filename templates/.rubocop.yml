@@ -1,0 +1,21 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  RunRailsCops: true
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - '**/db/migrate/*'
