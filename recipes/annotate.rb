@@ -4,6 +4,6 @@ gem_group :development do
   gem 'annotate'
 end
 
-run_bundle
-
-generate 'annotate:install'
+after_bundle do
+  generate 'annotate:install'
+end

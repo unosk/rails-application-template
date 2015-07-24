@@ -2,6 +2,6 @@ apply File.join(File.dirname(__FILE__), '..', 'helpers.rb') unless defined? TEMP
 
 gem 'kaminari'
 
-run_bundle
-
-generate 'kaminari:config'
+after_bundle do
+  generate 'kaminari:config'
+end

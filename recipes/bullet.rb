@@ -4,8 +4,6 @@ gem_group :development do
   gem 'bullet'
 end
 
-run_bundle
-
 gsub_file 'config/environments/development.rb', /^end$/, %(
   config.after_initialize do
     Bullet.enable = true

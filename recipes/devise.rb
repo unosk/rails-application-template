@@ -4,12 +4,12 @@ gem 'devise'
 gem 'devise-encryptable'
 gem 'devise-i18n'
 
-run_bundle
+after_bundle do
+  generate 'devise:install'
 
-generate 'devise:install'
+  gsub_file 'config/initializers/devise.rb', /# (config.scoped_views) .*/, '\1 = true'
 
-gsub_file 'config/initializers/devise.rb', /# (config.scoped_views) .*/, '\1 = true'
+  remove_file 'config/locales/devise.en.yml'
 
-remove_file 'config/locales/devise.en.yml'
-
-get_from_repo 'spec/support/devise.rb'
+  get_from_repo 'spec/support/devise.rb'
+end

@@ -4,6 +4,4 @@ gem_group :development, :test do
   gem 'factory_girl_rails'
 end
 
-run_bundle
-
 get_from_repo 'spec/support/factory_girl.rb'

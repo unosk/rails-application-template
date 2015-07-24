@@ -5,6 +5,4 @@ gem_group :development, :test do
   gem 'faker-japanese'
 end
 
-run_bundle
-
 get_from_repo 'config/initializers/faker.rb'

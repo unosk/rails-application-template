@@ -11,5 +11,3 @@ end
 gem_group :development do
   gem 'quiet_assets'
 end
-
-run_bundle

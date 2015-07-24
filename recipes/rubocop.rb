@@ -4,7 +4,5 @@ gem_group :development, :test do
   gem 'rubocop'
 end
 
-run_bundle
-
 get_from_repo '.rubocop.yml'
 get_from_repo '.rubocop_todo.yml'

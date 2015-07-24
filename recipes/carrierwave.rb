@@ -7,8 +7,6 @@ gem_group :development, :test do
   gem 'dummy_magick'
 end
 
-run_bundle
-
 get_from_repo 'app/uploaders/application_uploader/base.rb'
 get_from_repo 'app/uploaders/application_uploader/image.rb'
 

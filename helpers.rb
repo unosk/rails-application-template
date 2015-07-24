@@ -26,7 +26,3 @@ def get_from_repo(source, destination = nil)
   source = File.join(File.dirname(__FILE__), 'templates', source)
   get source, destination
 end
-
-def run_bundle
-  run 'bundle install --quiet'
-end

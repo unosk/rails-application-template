@@ -3,5 +3,3 @@ apply File.join(File.dirname(__FILE__), '..', 'helpers.rb') unless defined? TEMP
 gem_group :doc do
   gem 'yard'
 end
-
-run_bundle

@@ -18,35 +18,33 @@ gem_group :test do
   gem 'simplecov-rcov', require: false
 end
 
-run_bundle
+after_bundle do
+  generate 'rspec:install'
 
-run './bin/spring binstub --all'
-
-generate 'rspec:install'
-
-append_file '.rspec', <<-CODE
+  append_file '.rspec', <<-CODE
 --require rails_helper
 --format documentation
 CODE
 
-gsub_file 'spec/rails_helper.rb', /(config.use_transactional_fixtures) = .*/, '\1 = true'
-gsub_file 'spec/rails_helper.rb', /# Dir/, 'Dir'
-inject_into_file 'spec/rails_helper.rb', %(
+  gsub_file 'spec/rails_helper.rb', /(config.use_transactional_fixtures) = .*/, '\1 = true'
+  gsub_file 'spec/rails_helper.rb', /# Dir/, 'Dir'
+  inject_into_file 'spec/rails_helper.rb', %(
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'capybara/poltergeist'
 require 'shoulda/matchers'
 require 'simplecov'), after: '# Add additional requires below this line. Rails is not loaded until this point!'
 
-get_from_repo 'spec/factories_spec.rb'
+  get_from_repo 'spec/factories_spec.rb'
 
-%w(capybara database_cleaner email).each do |support|
-  get_from_repo "spec/support/#{support}.rb"
-end
+  %w(capybara database_cleaner email).each do |support|
+    get_from_repo "spec/support/#{support}.rb"
+  end
 
-get_from_repo '.simplecov'
+  get_from_repo '.simplecov'
 
-append_file '.gitignore', %(
+  append_file '.gitignore', %(
 # Ignore coverage.
 /coverage
 )
+end
