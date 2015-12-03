@@ -13,7 +13,7 @@ gem_group :test do
   gem 'poltergeist'
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'simplecov-rcov', require: false
 end
@@ -32,7 +32,6 @@ CODE
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'capybara/poltergeist'
-require 'shoulda/matchers'
 require 'simplecov'), after: '# Add additional requires below this line. Rails is not loaded until this point!'
 
   get_from_repo 'spec/factories_spec.rb'
