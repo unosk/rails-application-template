@@ -29,6 +29,7 @@ end
   devise
   carrierwave
   kaminari
+  dotenv
 ).each do |recipe|
   apply_recipe recipe if yes_wizard?("Do you use #{recipe}?")
 end
