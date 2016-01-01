@@ -8,6 +8,7 @@ after_bundle do
   generate 'devise:install'
 
   gsub_file 'config/initializers/devise.rb', /# (config.scoped_views) .*/, '\1 = true'
+  gsub_file 'config/initializers/devise.rb', /" (config.encryptor) .*/, '\1 = :sha512'
 
   remove_file 'config/locales/devise.en.yml'
 
