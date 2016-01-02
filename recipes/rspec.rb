@@ -34,8 +34,6 @@ require 'capybara/rails'
 require 'capybara/poltergeist'
 require 'simplecov'), after: '# Add additional requires below this line. Rails is not loaded until this point!'
 
-  get_from_repo 'spec/factories_spec.rb'
-
   %w(capybara database_cleaner email shoulda_matchers).each do |support|
     get_from_repo "spec/support/#{support}.rb"
   end
