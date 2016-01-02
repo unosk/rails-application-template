@@ -36,7 +36,7 @@ require 'simplecov'), after: '# Add additional requires below this line. Rails i
 
   get_from_repo 'spec/factories_spec.rb'
 
-  %w(capybara database_cleaner email).each do |support|
+  %w(capybara database_cleaner email shoulda_matchers).each do |support|
     get_from_repo "spec/support/#{support}.rb"
   end
 
