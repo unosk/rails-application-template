@@ -15,7 +15,6 @@ gem_group :test do
   gem 'email_spec'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
-  gem 'simplecov-rcov', require: false
 end
 
 after_bundle do
