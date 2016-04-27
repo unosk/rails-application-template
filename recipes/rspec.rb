@@ -11,6 +11,7 @@ end
 gem_group :test do
   gem 'capybara'
   gem 'poltergeist'
+  gem 'webmock'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'shoulda-matchers'
@@ -31,6 +32,7 @@ CODE
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'capybara/poltergeist'
+require 'webmock/rspec'
 require 'simplecov'), after: '# Add additional requires below this line. Rails is not loaded until this point!'
 
   %w(capybara database_cleaner email shoulda_matchers).each do |support|
