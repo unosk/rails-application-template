@@ -21,17 +21,12 @@ git commit: '-m "Railsアプリケーションを新規作成"'
   yard
   mailcatcher
   cleanup
-).each do |recipe|
-  apply_recipe recipe
-end
-
-%w(
   devise
   carrierwave
   kaminari
   dotenv
 ).each do |recipe|
-  apply_recipe recipe if yes_wizard?("Do you use #{recipe}?")
+  apply_recipe recipe if yes_wizard?("Do you apply #{recipe}?")
 end
 
 after_bundle do
