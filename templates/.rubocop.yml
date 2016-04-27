@@ -1,7 +1,10 @@
 inherit_from: .rubocop_todo.yml
 
+Rails:
+  Enabled: true
+
 AllCops:
-  RunRailsCops: true
+  TargetRubyVersion: 2.3
   Include:
     - '**/Gemfile'
     - '**/Rakefile'
@@ -10,10 +13,10 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/**/*'
 
-Style/Documentation:
+Style/AsciiComments:
   Enabled: false
 
-Style/AsciiComments:
+Style/Documentation:
   Enabled: false
 
 Metrics/MethodLength:
